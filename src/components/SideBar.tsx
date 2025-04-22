@@ -31,9 +31,9 @@ const SideBar = () => {
                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-300 cursor-pointer
                   ${activeItem === item.name ? 
                     'bg-white text-pastel-purple font-bold shadow-md transform translate-x-2' : 
-                    'text-gray-700 hover:bg-white/50'
+                    'text-gray-600 font-extrabold  hover:bg-white/50'
                   }
-                  ${isHovered === item.name ? 'scale-105' : ''}
+                  ${isHovered === item.name ? 'scale-105 ' : ''}
                 `}
                 onClick={() => setActiveItem(item.name)}
                 onMouseEnter={() => setIsHovered(item.name)}
