@@ -24,8 +24,8 @@ const handleRouteChange = (itemName: string) => {
   return (
     <div className="min-w-[16rem] h-screen rounded-tr-5xl rounded-br-2xl flex justify-between flex-col items-center bg-pastel-lavender ">
       <div className="flex flex-col w-full items-center mt-8 gap-10">
-        <div className="flex items-center justify-center bg-white rounded-full p-4 shadow-md transform transition-all duration-300 hover:scale-110">
-          <h1 className="titleApp text-3xl font-bold bg-gradient-to-r from-pastel-pink to-pastel-lavender bg-clip-text text-transparent">
+        <div className="mb-4 flex items-center justify-center bg-pastel-purple/20 rounded-full p-4 shadow-md transform transition-all duration-300 hover:scale-110">
+          <h1 className="titleApp text-3xl  font-bold  bg-clip-text text-white">
           ✿ PlannerApp 
           </h1>
         </div>

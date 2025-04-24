@@ -1,4 +1,4 @@
-import { Calendar, CheckSquare, BookText, Heart, BarChart, PenTool, Sparkles } from 'lucide-react';
+import { Calendar, CheckSquare, BookText, Heart, PenTool, Sparkles } from 'lucide-react';
 
 const Overview = () => {
   const tasks = [
@@ -20,9 +20,9 @@ const Overview = () => {
   
   const completedTasks = 12;
   const habitProgress = 75;
-  const mostRecentMood = '😊';
+  const mostRecentMood = '✨';
   
-  const setActiveTab = (tab) => {
+  const setActiveTab = (tab: string) => {
     console.log(`Navigate to ${tab} tab`);
   };
  
@@ -197,7 +197,7 @@ const Overview = () => {
         </div>
       </div>
       
-*      <div className="absolute bottom-0 left-0 w-16 h-4 bg-blue-200 -rotate-6 origin-bottom-left transform -translate-x-2"></div>
+      <div className="absolute bottom-0 left-0 w-16 h-4 bg-blue-200 -rotate-6 origin-bottom-left transform -translate-x-2"></div>
       <div className="absolute bottom-0 right-0 w-16 h-4 bg-purple-200 rotate-6 origin-bottom-right transform translate-x-2"></div>
     </div>
   );
