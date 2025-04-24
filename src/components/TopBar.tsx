@@ -10,10 +10,10 @@ const TopBar = () => {
   return (
     <div className="flex justify-between h-[5rem] items-center bg-pastel-lavender p-4 shadow-lg shadow-red/20 font-cute">
       <div className="flex items-center gap-2">
-        <Heart size={24} className="text-pastel-purple animate-sparkle" />
+        <Heart size={32} className="text-white animate-sparkle" />
         <div className="flex flex-col">
-          <h2 className="text-xl font-bold text-white tracking-wide">Personal Planner</h2>
-          <h3 className="text-sm text-white opacity-80">
+          <h2 className="text-4xl font-bold text-white tracking-wide font-bro">Personal Planner</h2>
+          <h3 className="text-2xl font-cookie text-white opacity-80">
             {new Intl.DateTimeFormat('en-US', {
               day: 'numeric',
               month: 'long',
@@ -31,7 +31,7 @@ const TopBar = () => {
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
             placeholder="Search..."
-            className="pl-8 pr-4 py-2 rounded-xl bg-white/70 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-pastel-purple transition-all placeholder:text-pastel-purple/60"
+            className="placeholder-cookie pl-8 pr-4 py-2 rounded-xl bg-white/70 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-pastel-purple transition-all placeholder:text-pastel-purple/60"
           />
           <Search 
             size={16} 

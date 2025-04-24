@@ -15,6 +15,9 @@ export default {
       },
       fontFamily: {
         'cute': ['Quicksand', 'sans-serif'],
+        'bro': ['Bro', 'sans-serif'],
+        'cookie': ['Cookie', 'sans-serif'],
+        'nabuya': ['Nabuya', 'sans-serif'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
