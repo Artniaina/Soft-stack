@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Home, ListTodo, Calendar, Clock, FileText, Layout, ChevronRight } from 'lucide-react';
+import { usePlannerContext } from '../context/usePlannerContext';
 
 const SideBar = () => {
+  const { link, setLink } = usePlannerContext();
   const [activeItem, setActiveItem] = useState('Overview');
-  const [isHovered, setIsHovered] = useState(null);
+  const [isHovered, setIsHovered] = useState<string | null>(null);
 
   const menuItems = [
     { name: 'Overview', icon: <Layout /> },
@@ -13,6 +15,11 @@ const SideBar = () => {
     { name: 'Note', icon: <FileText /> },
     { name: 'Pomodoro', icon: <Clock /> },
   ];
+
+const handleRouteChange = (itemName: string) => {
+    setLink(itemName);  
+    setActiveItem(itemName)
+}
 
   return (
     <div className="min-w-[16rem] h-screen flex justify-between flex-col items-center bg-pastel-peach shadow-lg">
@@ -35,7 +42,7 @@ const SideBar = () => {
                   }
                   ${isHovered === item.name ? 'scale-105 ' : ''}
                 `}
-                onClick={() => setActiveItem(item.name)}
+                onClick={() => handleRouteChange(item.name)}
                 onMouseEnter={() => setIsHovered(item.name)}
                 onMouseLeave={() => setIsHovered(null)}
               >
