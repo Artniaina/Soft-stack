@@ -8,13 +8,29 @@
   padding: none;
 }
 
+@font-face {
+  font-family: 'Cookie';
+  src: url('/fonts/GoodUnicornRegular-Rxev.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nabuya';
+  src: url('/fonts/CutiePatootieSkinny-8zXZ.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: #FFF0F5; 
-  color: #482888; 
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Nabuya', sans-serif;
   cursor: default;
 }
 
+.titleApp{
+  font-family: 'Cookie', sans-serif;
+
+}
 .pastel-border {
   box-shadow: 
     0 0 0 2px #FFB6C1, 
