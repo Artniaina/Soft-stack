@@ -9,16 +9,16 @@
 }
 
 body {
-  background-color: #FFF0F5; /* Light pink */
-  color: #9370DB; /* Medium purple */
+  background-color: #FFF0F5; 
+  color: #482888; 
   font-family: 'Quicksand', sans-serif;
   cursor: default;
 }
 
 .pastel-border {
   box-shadow: 
-    0 0 0 2px #FFB6C1, /* Light pink */
-    0 0 0 4px #DDA0DD; /* Plum */
+    0 0 0 2px #FFB6C1, 
+    0 0 0 4px #DDA0DD; 
   border-radius: 12px;
 }
 

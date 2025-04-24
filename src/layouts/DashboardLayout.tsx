@@ -2,7 +2,7 @@ import { usePlannerContext } from "../context/usePlannerContext";
 import SideBar from "../components/SideBar";
 import TopBar from "../components/TopBar";
 import OverView from "../features/OverView";
-import TaskList from "../features/TaskList";
+import TaskList from "../features/Task/TaskList";
 import Pomodoro from "../features/Pomodoro";
 import Planning from "../features/Planning";
 import ToDoList from "../features/ToDoList";
@@ -37,14 +37,12 @@ const DashboardLayout: React.FC = () => {
 
   return (
     <div className="flex overflow-hidden h-screen">
-      <aside className="bg-pastel-peach">
         <SideBar />
-      </aside>
-      <main className="flex-1 flex flex-col bg-pastel-pink">
-        <header className="h-[6rem]">
+      <main className="flex-1 flex flex-col">
+        <header >
           <TopBar />
         </header>
-        <section className="bg-pastel-yellow flex-1 overflow-auto p-4">
+        <section className="flex-1 overflow-auto p-4">
           {RenderedComponent}
         </section>
       </main>
