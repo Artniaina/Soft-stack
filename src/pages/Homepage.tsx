@@ -26,7 +26,7 @@ const Homepage = () => {
         </div>
         
         <h1 className="text-3xl font-cookie text-center text-pastel-purple mb-6">
-          My Personal Planner
+          Personal Planner
         </h1>
         
         <div className="relative">

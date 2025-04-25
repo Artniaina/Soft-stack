@@ -12,14 +12,13 @@ const TopBar = () => {
       <div className="flex items-center gap-2">
         <Heart size={32} className="text-white animate-sparkle" />
         <div className="flex flex-col">
-          <h2 className="text-4xl font-bold text-white tracking-wide font-bro">Personal Planner</h2>
-          <h3 className="text-2xl font-cookie text-white opacity-80">
+            <h3 className="text-2xl font-cookie text-white opacity-80 uppercase">
             {new Intl.DateTimeFormat('en-US', {
               day: 'numeric',
               month: 'long',
               year: 'numeric',
             }).format(today)} • {hour.toString().padStart(2, '0')}:{minutes.toString().padStart(2, '0')}
-          </h3>
+            </h3>
         </div>
       </div>
 
