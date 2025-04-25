@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Home, ListTodo, Calendar, Clock, FileText, Layout, ChevronRight, ChevronLeft } from 'lucide-react';
 import { usePlannerContext } from '../context/usePlannerContext';
 
+
 const SideBar = () => {
   const { setLink } = usePlannerContext();
   const [activeItem, setActiveItem] = useState('Overview');
@@ -31,7 +32,11 @@ const SideBar = () => {
         <div 
           key={`reliure-${i}`} 
           className="w-3 h-6 bg-pastel-lavender border-r-2 border-pastel-purple rounded-l-full shadow-sm my-1"
-        />
+        >
+          <div className='text-gray-600 text-5xl rotate-90'>
+      {")"}
+          </div>
+      </div>
       );
     }
     
@@ -54,11 +59,11 @@ const SideBar = () => {
                 isCollapsed ? 'scale-100' : 'hover:scale-110'
               } `}>
                 ✿ <span className='text-5xl'>Planner</span>
-              </h1>    
+              </h1>
             )}
             <button
               onClick={() => setIsCollapsed(!isCollapsed)}
-              className={`p-2 bg-white rounded-full shadow relative hover:bg-gray-100 transition-all ${isCollapsed? '': ' left-[2rem] '} `}
+              className={`p-2  shadow-lg rounded-full shadow relative hover:bg-gray-100 transition-all ${isCollapsed? 'bg-white': 'text-white  bg-pastel-lavender left-[0.7rem] hover:text-gray-900  '} `}
             >
               {isCollapsed ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}
             </button>

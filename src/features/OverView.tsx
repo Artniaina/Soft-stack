@@ -196,9 +196,9 @@ const Overview = () => {
           </div>
         </div>
       </div>
-      
+{/*       
       <div className="absolute bottom-0 left-0 w-16 h-4 bg-blue-200 -rotate-6 origin-bottom-left transform -translate-x-2"></div>
-      <div className="absolute bottom-0 right-0 w-16 h-4 bg-purple-200 rotate-6 origin-bottom-right transform translate-x-2"></div>
+      <div className="absolute bottom-0 right-0 w-16 h-4 bg-purple-200 rotate-6 origin-bottom-right transform translate-x-2"></div> */}
     </div>
   );
 };
