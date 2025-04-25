@@ -22,7 +22,6 @@ const PlannerContext = createContext<PlannerContextType | undefined>(undefined);
 
 export const PlannerProvider: React.FC<PlannerContextProps> = ({ children }) => {
   const [link, setLink] = useState('Overview');
-  // console.log("PlannerContext", link);
 
   return (
     <PlannerContext.Provider value={{ link, setLink }}>
