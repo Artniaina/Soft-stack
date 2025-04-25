@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Background from "../assets/pink.png";
+import { LuFlower } from "react-icons/lu";
+import Cute from "../assets/cuteflowerhover.png"
 
 const Note = () => {
   const [notes, setNotes] = useState([
@@ -51,7 +53,9 @@ const Note = () => {
   return (
     <div className="p-6">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">My Notes</h1>
+        <h1 className="text-6xl font-nabuya text-center text-pink-500 flex items-center justify-center">
+          - My Notes <LuFlower className="text-xl ml-2" />
+        </h1>
         <button
           onClick={() => setShowForm(!showForm)}
           className="px-4 py-2 bg-pastel-purple text-white rounded-lg shadow-pastel hover:shadow-pastel-hover transition-all"
@@ -62,22 +66,27 @@ const Note = () => {
 
       <div className="flex flex-wrap ">
         {notes.map((note) => (
-            <div
+          <div
             key={note.id}
             className="relative h-[23rem] gap-4 justify-center w-[25rem] overflow-hidden bg-cover bg-center"
-            style={{ 
+            style={{
               backgroundImage: `url(${Background})`,
-              transform: `rotate(${note.id % 11 - 5}deg)`,
-        
-              scale: `${0.9 + (note.id % 3) * 0.1}`            }}
-            >
+              transform: `rotate(${(note.id % 11) - 5}deg)`,
+              scale: `${0.9 + (note.id % 3) * 0.1}`,
+            }}
+          >
             <div className="absolute h-[16rem] rounded-lg w-[17rem] top-[3.2rem] left-[5rem] inset-0 bg-white bg-opacity-60 p-4 flex flex-col text-left justify-center">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-              {note.title}
+              <div className="absolute -top-2 left-8 w-12 h-12  flex items-center justify-center rounded-full shadow-lg shadow-pastel-purple/50">
+                <img src={Cute} alt="" />
+              </div>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-2 font-nabuya text-pink-700 text-4xl">
+                {note.title}
               </h2>
-              <p className="text-gray-600">{note.content}</p>
+              <p className="text-gray-700 font-nabuya text-2xl">
+                {note.content}
+              </p>
             </div>
-            </div>
+          </div>
         ))}
       </div>
     </div>

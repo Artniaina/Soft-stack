@@ -11,6 +11,7 @@ const TopBar = () => {
     <div className="flex justify-between h-[5rem] items-center bg-pastel-lavender p-4 shadow-lg shadow-red/20 font-cute">
       <div className="flex items-center gap-2">
         <Heart size={32} className="text-white animate-sparkle" />
+        
         <div className="flex flex-col">
             <h3 className="text-2xl font-cookie text-white opacity-80 uppercase">
             {new Intl.DateTimeFormat('en-US', {
