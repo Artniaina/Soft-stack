@@ -36,7 +36,7 @@ const DashboardLayout: React.FC = () => {
   }
 
   return (
-    <div className="flex overflow-hidden h-screen">
+    <div className="flex overflow-hidden max-h-[100vh]">
         <SideBar />
       <main className="flex-1 flex flex-col">
         <header >
