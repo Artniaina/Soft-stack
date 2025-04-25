@@ -1,9 +1,12 @@
-import { useState } from "react";
-import Background from "../assets/pink.png";
+import { useRef, useState } from "react";
+import Background from "../../assets/pink.png";
 import { LuFlower } from "react-icons/lu";
-import Cute from "../assets/cuteflowerhover.png"
+import Cute from "../../assets/cuteflowerhover.png";
+import NoteDetails from "./NoteDetails";
 
 const Note = () => {
+  const ref = useRef<HTMLDivElement>(null);
+
   const [notes, setNotes] = useState([
     {
       id: 1,
@@ -30,24 +33,20 @@ const Note = () => {
         "New app feature: dark mode, notification settings, and user profile customization.",
     },
   ]);
+  const [showDetails, setShowDetails] = useState(false);
+  const [selectedNote, setSelectedNote] = useState(null);
 
   const [showForm, setShowForm] = useState(false);
-  const [newNote, setNewNote] = useState({ title: "", content: "" });
 
-  const handleAddNote = () => {
-    if (newNote.title.trim() === "" || newNote.content.trim() === "") return;
+  const focusRef = () => {};
 
-    setNotes([
-      ...notes,
-      {
-        id: Date.now(),
-        title: newNote.title,
-        content: newNote.content,
-      },
-    ]);
-
-    setNewNote({ title: "", content: "" });
-    setShowForm(false);
+  const handleShowDetails = (note: any) => {
+    setSelectedNote(note);
+    setShowDetails(true);
+  };
+  const handleCloseDetails = () => {
+    setShowDetails(false);
+    setSelectedNote(null);
   };
 
   return (
@@ -64,11 +63,11 @@ const Note = () => {
         </button>
       </div>
 
-      <div className="flex flex-wrap ">
+      <div ref={ref} className="flex w-[80rem] flex-wrap gap-[2.5rem]">
         {notes.map((note) => (
           <div
             key={note.id}
-            className="relative h-[23rem] gap-4 justify-center w-[25rem] overflow-hidden bg-cover bg-center"
+            className="relative h-[23rem] justify-center w-[25rem] overflow-hidden bg-cover bg-center"
             style={{
               backgroundImage: `url(${Background})`,
               transform: `rotate(${(note.id % 11) - 5}deg)`,
@@ -89,6 +88,7 @@ const Note = () => {
           </div>
         ))}
       </div>
+      {showDetails && <NoteDetails onClose={handleCloseDetails} />}
     </div>
   );
 };

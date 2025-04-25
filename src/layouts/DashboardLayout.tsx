@@ -6,7 +6,7 @@ import TaskList from "../features/Task/TaskList";
 import Pomodoro from "../features/Pomodoro";
 import Planning from "../features/Planning";
 import ToDoList from "../features/ToDoList";
-import Note from "../features/Note";
+import Note from "../features/Notes/Note";
 
 const DashboardLayout: React.FC = () => {
   const { link } = usePlannerContext();
